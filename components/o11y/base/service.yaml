@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: o11y
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: o11y
+    app.kubernetes.io/part-of: o11y
+  name: o11y
+spec:
+  ports:
+  - port: 8090
+    targetPort: 8090
+  selector:
+    app.kubernetes.io/instance: o11y
+status:
+  loadBalancer: {}
